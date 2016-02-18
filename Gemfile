@@ -3,6 +3,8 @@ ruby '2.2.1'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails'
+gem 'test-unit'
+gem 'minitest'
 
 group :development, :test do
   gem 'sqlite3'
