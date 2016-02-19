@@ -8,7 +8,7 @@ gem 'minitest'
 
 group :development, :test do
   gem 'sqlite3'
-
+  gem 'rspec-rails', '3.3.2'
   gem 'guard-rspec', '4.6.0'
   gem 'guard-livereload'
   gem 'spork-rails', github: 'sporkrb/spork-rails' # rubygems version not rails 4 compatible
@@ -17,7 +17,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'rspec-rails', '3.3.2'	
+  
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '>=2.1.0'
 end
