@@ -8,12 +8,18 @@ gem 'minitest'
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'rspec-rails', '2.13.1'
+
+  gem 'guard-rspec', '4.6.0'
+  gem 'guard-livereload'
+  gem 'spork-rails', github: 'sporkrb/spork-rails' # rubygems version not rails 4 compatible
+  gem 'guard-spork'
+  gem 'childprocess'
 end
 
 group :test do
+  gem 'rspec-rails', '3.3.2'	
   gem 'selenium-webdriver', '2.35.1'
-  gem 'capybara', '2.1.0'
+  gem 'capybara', '>=2.1.0'
 end
 
 gem 'sass-rails', '4.0.1'
@@ -29,9 +35,11 @@ group :doc do
   gem 'sdoc', '0.3.20', require: false
 end
 
+gem 'heroku'
+
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
-  gem 'heroku'
+  
 end
 
